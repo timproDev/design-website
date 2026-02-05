@@ -1,0 +1,86 @@
+
+.ui-copy-email {
+  display: inline-block;
+  position: relative;
+  transform: translateY(1px);
+  z-index: 1000;
+  label {
+    padding-inline-end: .75rem;
+  }
+  button.copy-email-btn {
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 12px 20px 12px 36px;
+    border-radius: 40px;
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: -.5px;
+    border: none;
+    position: relative;
+    box-shadow: var(--box-shadow-straight);
+    &:before {
+      font-family: "Material Icons";
+      content: "content_copy";
+      font-size: 1rem;
+      margin-right: 0.5em;
+      display: inline-block;
+      line-height: 1;
+      color: #fff;
+      //
+      display: block;
+      position: absolute;
+      left: 14px;
+      top: 30%;
+      bottom: 0;
+    }
+      //
+    
+    &:hover {      
+      background-color: var(--color-accent-light);
+      color: #000;
+      &:before {
+        color: var(--color-black);
+      }
+    }
+    &:active {
+      background-color: var(--color-accent);
+    }
+    &.copied {
+      background-color: #000; /* light green background */
+      color: #fff;
+    }
+  }
+
+  .feedback {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(0) translateY(80px);
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    pointer-events: none;
+    opacity: 0;
+    // white-space: nowrap;
+    white-space: pre-line;
+    width: 80px;
+    text-align: center;
+    
+    @include mq("reduce motion") {
+      @include transition(
+        opacity var(--transition-speed-medium) ease-in-out,
+        transform var(--transition-speed-medium) ease-in-out
+      );
+    }
+  }
+
+  .feedback.show {
+    
+    opacity: 1;
+    transform: translateX(0px) translateY(100px);
+  }
+}

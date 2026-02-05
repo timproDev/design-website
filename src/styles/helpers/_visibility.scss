@@ -2,8 +2,18 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@include mq('tablet') {
   .hide-mobile {
     display: initial;
+  }
+}
+
+.show-mobile {
+  display: block !important;
+}
+
+@include mq('tablet') {
+  .show-mobile {
+    display: none !important;
   }
 }

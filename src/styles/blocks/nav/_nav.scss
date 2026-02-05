@@ -1,73 +1,119 @@
 nav {
     background-color: var(--color-background-light);
-    padding: var(--space-s) 0;
+    display: flex;
+    
+    padding: var(--space-ms) var(--space-m);
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+
     @include mq('tablet') {
-        padding: var(--space-ms) 0 var(--space-xxxs) 0;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-ms) var(--space-m);
     }
-    ul {
-        list-style-type: none;
-        display: block;
-        text-align: center;
-        @include mq('tablet') {
-        }
-        li {
-            display: inline-block;
-            @include mq('tablet') {}
-            margin-block-start: 0;
-            padding: 0 2%;
-            @include mq('tablet') {
-                padding: 0 var(--space-ml);
-            }
-        }
-    }
-    a {
-        font-family: var(--font-family-primary);
+
+    .home {
+        flex: 0 0 auto;
         text-decoration: none;
-        color: var(--color-text-onlight);
-        padding: 0;
-        font-weight: 600;
-        border-bottom: 1px dashed transparent;
-        margin-block-start: 0;
-        display: inline-block;        
-        font-size: var(--typ-p-size-m) + 4;
-        @include transition(color var(--transition-speed-medium));
+        font-weight: bold;
+        padding-bottom: 12px;
         @include mq('tablet') {
-            font-size: 22px;
+            padding-bottom: 0;
+            align-items: center;
         }
+    }
+
+
+
+    ul {
+        display: flex;
+        
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 0;
+        flex-direction: column;
+    align-items: center;
+    width: 100%;
+        @include mq('tablet') {
+            align-items: stretch;
+            flex-direction: row;
+            padding: 0 24px 0 24px;
+            // justify-content: center;
+            gap: 3rem;
+        flex: 1;
+        justify-content: end;
+        }
+        li {}
+    }
+
+    .ui-copy-email {
+        flex: 0 0 auto;
+        text-decoration: none;
+    }
+}
+
+a.menu-item {
+    font-family: var(--font-family-primary);
+    text-decoration: none;
+    color: var(--color-text-onlight);
+    padding: 0;
+    font-weight: 500;
+    margin-block-start: 0;
+    display: inline-block;
+    @include transition(color var(--transition-speed-medium));
+    font-size: 22px;
+    @include mq('tablet') {
+        font-weight: 300;
+        font-size: 24px;
+    }
+    &.home {
+        padding-bottom: 8px;
+        @include mq('tablet') {
+            padding: 0;
+        }
+    }
+    span {
+        font-weight: 800;
+        display: inline-block;
+        @include transition(color var(--transition-speed-slow));
+    }
+
+    &:hover {
+        @media screen and (prefers-reduced-motion: no-preference) {
+            animation: textAnim;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            animation-duration: 250ms;
+            animation-delay: 350ms;
+        }
+
         span {
-            font-weight: 800;
-            display: inline-block;            
-            @include transition(color var(--transition-speed-slow));            
-        }
-        &:hover {
             @media screen and (prefers-reduced-motion: no-preference) {
-                animation: textAnim;
-                animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                animation: dotAnim;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.75);
                 animation-fill-mode: forwards;
                 animation-direction: normal;
                 animation-iteration-count: 1;
-                animation-duration: 250ms;
-                animation-delay: 350ms;
-              }
-            span {
-                @media screen and (prefers-reduced-motion: no-preference) {
-                    animation: dotAnim;
-                    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.75);
-                    animation-fill-mode: forwards;
-                    animation-direction: normal;
-                    animation-iteration-count: 1;
-                    animation-duration: 500ms;
-                    animation-delay: 50ms;
-                  }
-                color: black;
+                animation-duration: 500ms;
+                animation-delay: 50ms;
             }
+
+            color: black;
         }
-        &.active {
-            color: var(--color-accent);
-            pointer-events: none;
-            span {
-                color: black;
-            }
+    }
+
+    &.active {
+        color: var(--color-accent);
+        pointer-events: none;
+
+        span {
+            color: black;
         }
-    }    
+    }
 }
