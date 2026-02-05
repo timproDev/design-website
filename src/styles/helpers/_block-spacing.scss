@@ -1,0 +1,185 @@
+.l-padding--top-xxxl {
+    padding-block-start: var(--space-l);
+    @include mq('tablet') {
+        padding-block-start: var(--space-xxxl);
+    }
+}
+.l-padding--top-xxl {
+    padding-block-start: var(--space-ml);
+    @include mq('tablet') {
+        padding-block-start: var(--space-xxl);
+    }
+}
+
+.l-padding--bottom-xxl {
+    padding-block-end: var(--space-ml);
+    @include mq('tablet') {
+        padding-block-end: var(--space-xxl);
+    }
+}
+
+.l-padding--top-xl {
+    padding-block-start: var(--space-ml);
+    @include mq('tablet') {
+        padding-block-start: var(--space-xl);
+    }
+}
+
+.l-padding--bottom-xl {
+    padding-block-end: var(--space-ml);
+    @include mq('tablet') {
+        padding-block-end: var(--space-xl);
+    }
+}
+
+.l-padding--top-l {
+    padding-block-start: var(--space-m);
+    @include mq('tablet') {
+        padding-block-start: var(--space-l);
+    }
+}
+
+.l-padding--top-m {
+    padding-block-start: var(--space-xs);
+    @include mq('tablet') {
+        padding-block-start: var(--space-m);
+    }
+}
+
+.l-padding--bottom-l {
+    padding-block-end: var(--space-m);
+    @include mq('tablet') {
+        padding-block-end: var(--space-l);
+    }
+}
+
+.l-margin--top-xl {
+    margin-block-start: var(--space-ml);
+    @include mq('tablet') {
+        margin-block-start: var(--space-xxl);
+    }
+}
+
+.l-margin--bottom-xl {
+    margin-block-end: var(--space-ml);
+    @include mq('tablet') {
+        margin-block-end: var(--space-xxl);
+    }
+}
+
+.l-margin--top-l {
+    margin-block-start: var(--space-m);
+    @include mq('tablet') {
+        margin-block-start: var(--space-l);
+    }
+}
+
+.l-margin--top-m {
+    margin-block-start: var(--space-xs);
+    @include mq('tablet') {
+        margin-block-start: var(--space-m);
+    }
+}
+
+.l-margin--bottom-l {
+    margin-block-end: var(--space-m);
+    @include mq('tablet') {
+        margin-block-end: var(--space-l);
+    }
+}
+
+
+// padding y
+.l-padding--y-l {
+    padding-block-start: var(--space-m);
+    padding-block-end: var(--space-m);
+    @include mq('tablet') {
+        padding-block-start: var(--space-l);
+        padding-block-end: var(--space-l);
+    }
+}
+
+.l-padding--y-xl {
+    padding-block-start: var(--space-ml);
+    padding-block-end: var(--space-ml);
+    @include mq('tablet') {
+        padding-block-start: var(--space-xl);
+        padding-block-end: var(--space-xl);
+    }
+}
+
+.l-padding--y-xxl {
+    padding-block-start: var(--space-l);
+    padding-block-end: var(--space-l);
+    @include mq('tablet') {
+        padding-block-start: var(--space-xxl);
+        padding-block-end: var(--space-xxl);
+    }
+}
+
+// margin y
+
+.l-margin--y-xxxl {
+    margin-block-start: var(--space-l);
+    margin-block-end: var(--space-l);
+    @include mq('tablet') {
+        margin-block-start: var(--space-xxxl);
+        margin-block-end: var(--space-xxxl);
+    }
+}
+.l-margin--y-xxl {
+    margin-block-start: var(--space-ml);
+    margin-block-end: var(--space-ml);
+    @include mq('tablet') {
+        margin-block-start: var(--space-xxl);
+        margin-block-end: var(--space-xxl);
+    }
+}
+.l-margin--y-xl {
+    margin-block-start: var(--space-m);
+    margin-block-end: var(--space-m);
+    @include mq('tablet') {
+        margin-block-start: var(--space-xl);
+        margin-block-end: var(--space-xl);
+    }
+}
+.l-margin--y-l {
+    margin-block-start: var(--space-ms);
+    margin-block-end: var(--space-ms);
+    @include mq('tablet') {
+        margin-block-start: var(--space-l);
+        margin-block-end: var(--space-l);
+    }
+}
+
+// color
+
+.color--accent {
+    color: var(--color-accent);
+}
+
+.color--background-white {
+    background-color: white;
+}
+
+.color--background-accent {
+    background-color: var(--color-accent);
+}
+
+.color--background-black {
+    background-color: black;
+}
+
+.visible-desktop-only {
+    display: none;
+    @include mq('tablet') {
+        display: initial;
+    }
+}
+
+.visible-mobile-only {
+    display: initial;
+    @include mq('tablet') {
+        display: none;
+    }
+}

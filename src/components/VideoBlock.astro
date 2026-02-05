@@ -1,0 +1,21 @@
+---
+const { vidSrc, title, description } = Astro.props;
+---
+
+  <div class="video-block">
+    <div class="video-block__container">
+      <div class="video-block__embed-container">
+        <iframe
+          title="vimeo-player"
+          src={vidSrc}
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <div class="video-block__body-container">
+        <h3 class="video-block__title">{title}</h3>
+        <div class="video-block__description">
+          <p>{description}</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+@include keyframes(dotAnim) {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@include keyframes(textAnim) {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
+
+@include keyframes(homeTextAnim) {
+    0% {
+        opacity: 0;
+        transform: translateX(-16.5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-18%);
+    }
+}
+
+@include keyframes(figcaptionBounce) {
+    0% {
+        opacity: 0;
+        transform: translateY(0,0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(10deg) translate(2px, -32px);
+    }
+}
+
+@include keyframes(figcaptionBounce2) {
+    0% {
+        opacity: 0;
+        transform: translateY(0,0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-8deg) translate(-4px, -50px);
+    }
+}

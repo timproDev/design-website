@@ -1,0 +1,198 @@
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+// SPACE
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+
+:root {
+    --space-xxxs: 2px;
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-ms: 24px;
+    --space-m: 32px;
+    --space-ml: 40px;
+    --space-l: 52px;
+    --space-xl: 80px;
+    --space-xxl: 120px;
+    --space-xxxl: 220px;
+}
+
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+// LAYOUT
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+
+:root {
+    // --max-content-width: 1178px;
+    --inner-content-custom-width: var(--max-content-width);
+    // --max-content-width: 1300px;
+    --max-content-width: 1240px;
+    --narrow-content-width: 800px;
+}
+
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+// TYPOGRAPHY
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+
+:root {
+
+    // -font-family
+    // --typ-font-family-brand: 'Roboto', arial, sans-serif;
+    // --typ-font-family-brand-bold: 'Roboto', arial, sans-serif;
+    // --typ-font-family-brand-mono: 'Roboto Mono', arial, sans-serif;
+    // --typ-font-family-brand-black: 'Roboto', arial, sans-serif;
+
+    --font-family-primary: 'Crimson Pro', serif;
+    --font-family-secondary: 'Tajawal', serif;
+    --typ-font-family-brand: 'Crimson Pro', serif;
+    --typ-font-family-body: 'Tajawal', serif;
+    --header-font-family: --font-family-primary;
+    --monospace-font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Courier New", Courier, monospace;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-antialiased: true;
+    --font-size-base: 16px;
+
+    // -line height Roboto
+    --typ-p-line-height: 1.7;
+    --typ-h-line-height: 1.33;
+    --typ-p-line-height-tight: 1.33;
+    --typ-h-line-height-tight: 1.1;
+
+    // -size h base
+    --typ-h-size-base: 16px;
+
+    // -size h scale
+    --typ-display-size: calc(var(--typ-h-size-base) * 3.25); // 52
+    --typ-h1-size: calc(var(--typ-h-size-base) * 3); // 48
+    --typ-h2-size: calc(var(--typ-h-size-base) * 2); // 32
+    --typ-h3-size: calc(var(--typ-h-size-base) * 1.75); // 28
+    --typ-h4-size: calc(var(--typ-h-size-base) * 1.5); // 24
+    --typ-h5-size: calc(var(--typ-h-size-base) * 1.125); // 18
+    --typ-h6-size: var(--typ-h-size-base);
+
+    @include mq('desktop') {
+        --typ-display-size: calc(var(--typ-h-size-base) * 3.75); // 60
+        --typ-h1-size: calc(var(--typ-h-size-base) * 3.25); // 52
+        --typ-h2-size: calc(var(--typ-h-size-base) * 3); // 48
+        --typ-h3-size: calc(var(--typ-h-size-base) * 2); // 32
+        --typ-h4-size: calc(var(--typ-h-size-base) * 1.75); // 28
+        --typ-h5-size: calc(var(--typ-h-size-base) * 1.5); // 24
+        --typ-h6-size: calc(var(--typ-h-size-base) * 1.125); // 18
+    }
+
+    // -size p base
+    --typ-p-size-base: 16px;
+
+    // -size p scale
+    //--typ-p-size-s: var(--typ-p-size-base); // 16
+    //--typ-p-size-m: calc(var(--typ-p-size-base) * 1.125); // 18
+    //--typ-p-size-ml: calc(var(--typ-p-size-base) * 1.25); // 20
+    //--typ-p-size-l: calc(var(--typ-p-size-base) * 1.5); // 24
+
+    --typ-p-size-xs: 14px;
+    --typ-p-size-s: var(--typ-p-size-base); // 16
+        --typ-p-size-m: calc(var(--typ-p-size-base) * 1.125); // 18
+        --typ-p-size-ml: 20px;// calc(var(--typ-p-size-base) * 1.5); // 24
+        --typ-p-size-l: calc(var(--typ-p-size-base) * 2); // 32
+        
+    @include mq('tablet') {
+        --typ-p-size-xs: 14px;
+        --typ-p-size-s: var(--typ-p-size-base); // 16
+        --typ-p-size-m: calc(var(--typ-p-size-base) * 1.125); // 18
+        --typ-p-size-ml: 20px;// calc(var(--typ-p-size-base) * 1.5); // 24
+        --typ-p-size-l: calc(var(--typ-p-size-base) * 2); // 32
+    }
+
+    // -space-stack
+    --typ-h1-space-block: 0 var(--space-s);
+    --typ-h2-space-block: 0 var(--space-s);
+    --typ-h3-space-block: 0 var(--space-s);
+    --typ-h4-space-block: 0 var(--space-s);
+    --typ-h5-space-block: 0 var(--space-s);
+    --typ-h6-space-block: 0 var(--space-s);
+    --typ-p-space-block-ms: 0 var(--space-s);
+    --typ-p-space-block-m: 0 var(--space-s);
+    --typ-p-space-block-l: 0 var(--space-s);
+
+    @include mq('tablet') {
+        --typ-h1-space-block: 0 var(--space-ms);
+        --typ-h2-space-block: 0 var(--space-ms);
+        --typ-h3-space-block: 0 var(--space-ms);
+        --typ-h4-space-block: 0 var(--space-ms);
+        --typ-h5-space-block: 0 var(--space-ms);
+        --typ-h6-space-block: 0 var(--space-ms);
+        --typ-p-space-block-ms: 0 var(--space-ms);
+        --typ-p-space-block-m: 0 var(--space-ms);
+        --typ-p-space-block-l: 0 var(--space-ms);
+    }
+}
+
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+// COLOR
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+
+:root {
+
+    // --color-action-mode: var(--color-blue);
+    --color-background-really-light: #f2f5fa;
+    --color-background-light: #f6f6f6;
+    --color-light-grey: #fcfcfc;
+
+
+    // --color-accent: #ff3f59;
+    --color-accent: #f73fff;
+    --color-accent-light: #fca2ff;
+    --color-accent-dark: #564057;
+    --color-accent-secondary: #564057;
+    --color-accent-2: var(--color-accent-secondary);
+
+    // -primary dark mode
+    @include mq('dark mode') {
+        // --color-action-mode: var(--color-light-blue);
+    }
+
+}
+
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+// MOTION
+// ---––––––––----–––––––––––-------––––––––––––--––––––––-----
+
+:root {
+    --transition-speed-slow: 650ms;
+    --transition-speed-medium: 300ms;
+    --transition-speed-fast: 150ms;
+    --transition-speed-very-fast: 50ms;
+    --bezier-version-1: cubic-bezier(.64, .08, .33, .81);
+    --bezier-version-2: cubic-bezier(.1, .9, .61, .66);
+}
+
+:root {
+    --border-radius-s: 2px;
+    --border-radius-m: 3px;
+    --border-radius-l: 6px;
+    --border-radius-xl: 16px;
+    // global
+    --border-radius-global: var(--border-radius-xl);
+}
+
+:root {
+    --box-shadow-right:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    // --box-shadow-straight: 0px 1px 1px rgba(3, 7, 18, 0.02),
+    //     0px 5px 4px rgba(3, 7, 18, 0.03),
+    //     0px 12px 9px rgba(3, 7, 18, 0.05),
+    //     0px 20px 15px rgba(3, 7, 18, 0.06),
+    //     0px 32px 24px rgba(3, 7, 18, 0.08);
+--box-shadow-straight: 0px 1px 2px rgba(0, 0, 0, 0.05),
+  0px 5px 8px rgba(0, 0, 0, 0.10),
+  0px 11px 18px rgba(0, 0, 0, 0.15),
+  0px 20px 32px rgba(0, 0, 0, 0.20);
+
+
+}

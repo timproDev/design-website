@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import VideoBlock from "../components/VideoBlock.astro";
+import videoData from "../data/videoData";
+---
+
+<Layout title="Video & Animation">
+  <Nav />
+  <main class="l-padding--bottom-xxl">
+    <div class="staff-row staff-full-content-width l-padding--top-xl">
+      <h1><span class="color--accent">.</span>video & animation</h1>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--y-xl">
+      <div class="staff-row staff-2-col-wide-left">
+        <div>
+          <div class="content-block">
+            <h2>Motion is medicine</h2>
+            <p>I’m a painter, illustrator, and musician, and my life has always revolved around the creative process. I studied Art and Animation at the University of Central Florida before moving to New York City, where I spent 16 years immersed in artistic exploration. During that time, I honed my craft across multiple disciplines—painting, music, and animation—attracted to the neverending flood of inspiration and stimuli.</p>
+            <p>Below you'll find various output of my artistic endeavors—enjoy!</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="global-img-container icon-grid">
+              <figure>
+                <img
+                  src="/assets/img/design/logos/proc.png"
+                  alt="ProCreate"
+                  class=""
+                />
+                <figcaption>Pro Create</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/assets/img/design/logos/ae.png"
+                  alt="Adobe After Effects"
+                  class=""
+                />
+                <figcaption>Adobe After Effects</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/assets/img/design/logos/pr.png"
+                  alt="Adobe Premier"
+                  class=""
+                />
+                <figcaption>Adobe Premier</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="staff-row staff-full-content-width">
+      <div>
+        <!--  -->
+        {videoData.map((block) => <VideoBlock {...block} />)}
+        <!--  -->
+    </div></div>
+  </main>
+</Layout>

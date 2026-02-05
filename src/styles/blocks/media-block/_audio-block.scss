@@ -1,0 +1,26 @@
+.audio-block {
+    padding: var(--space-s) 0 4vh 0;
+    &__container {}
+    &__embed-container {}
+    iframe {}
+    &__body-container {
+        padding: var(--space-s) 0;
+    }
+    &__label {
+        display: none;
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+    &__title {
+        @include -typo('h3');
+    }
+    &__description {
+        p {
+            margin-block-start: var(--space-s);
+            @include mq('tablet') {
+                margin-block-start: var(--space-s);
+            }
+        }
+    }
+
+}

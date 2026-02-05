@@ -1,0 +1,190 @@
+.design-block {
+    background: transparent;
+    padding: 2rem 1rem 2rem 1rem;
+    @include mq('tablet') {
+        padding: 2rem 3rem 2rem 3rem;
+    }
+    margin: 2rem 0;
+    height: 400px;
+    overflow: hidden;
+    background-color: var(--color-accent-dark);
+    background: #000000;
+    background: linear-gradient(27deg, rgba(0, 0, 0, 1) 0%, rgba(86, 64, 87, 1) 67%, rgba(121, 16, 125, 1) 100%);
+    border-radius: 24px;
+    box-shadow: none;
+    transform: translateY(0) scale(1);
+    @include transition(margin var(--transition-speed-slow), height var(--transition-speed-slow), box-shadow var(--transition-speed-slow), transform var(--transition-speed-slow));
+
+    @media (prefers-reduced-motion: reduce) {
+    .design-block {
+            transition: none;
+        }
+    }
+    // [data-expand-content] {
+    //     padding: 2rem;
+    // }
+    .global-img-container {
+        padding: 2rem 0 2rem 0;
+        @include mq('tablet') {
+            padding: 2rem;
+            padding-right: 0;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h4,
+    h6,
+    p,
+    a,
+    li {
+        color: #fff;
+
+    }
+    h3 {
+        text-align: center;
+        line-height: var(--typ-h-line-height-tight);
+        @include mq('tablet') {
+            text-align: left;
+        }
+    }
+
+    span {
+        font-weight: 800;
+        font-size: var(--typ-p-size-xs);
+        color: var(--color-accent-light);
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: none;
+        @include mq('tablet') {
+            display: block;
+        }
+    }
+
+    li {
+        margin-block-end: 1rem;
+    }
+
+    li,
+    p {
+        font-family: var(--font-family-secondary);
+        font-size: var(--typ-p-size-m);
+        line-height: 1.15;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    figure {
+        margin-block:2rem;
+        &:first-of-type {
+            margin-block-start: 0;
+        }
+        figcaption {
+            opacity: 0;
+        }
+    }
+    img {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--box-shadow-straight);        
+        // box-shadow: inset 0 10px 10px red;
+        // @include transition(transform var(--transition-speed-slow), opacity var(--transition-speed-medium));
+        // filter: grayscale(100%);
+        // transform: translateY(20px);
+        // opacity: .95;
+    }
+    &:hover {
+        img {
+            // filter: grayscale(0%);
+            // transform: translateY(0px);
+            // opacity: 1;
+        }        
+    }
+    position: relative;        
+
+    .li-visible-expand {
+        opacity: 0;
+        @include transition(opacity var(--transition-speed-slow));
+    }
+    .design-block__close {
+        @include transition(opacity var(--transition-speed-slow));
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 10;
+        color: #fff;
+        }
+    &.is-open {
+        box-shadow: var(--box-shadow-straight);
+        transform: translateY(16px) scale(1.05);
+        z-index: 100;
+        margin: 4rem 0;
+        .li-visible-expand {
+            opacity: 1;
+        }
+        .design-block__close {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+    button.design-block__expand {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        padding: 0.6em 1.1em;
+        font: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #000;
+        background-color: var(--color-accent-light);
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        @include transition(background-color var(--transition-speed-fast));
+        
+        @include mq('tablet') {
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            display: inline-block;
+            border-radius: 4px;
+            right: auto;
+        }
+
+        &:hover {
+            background-color: white;
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid #93c5fd;
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }

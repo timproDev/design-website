@@ -1,0 +1,37 @@
+.v-content-block--text {
+    .content-block {
+        &__img-container {}
+        &__header-img {
+            width: 100%;
+        }
+        &__eyebrow {}
+        &__eyebrow-text {}
+        &__body {}
+        &__body-title {
+            span, h2,h3,h4,h5,h6 {
+                @include transition(color var(--transition-speed-medium));
+            }
+        }
+        &__body-text {
+            p {
+                @include transition(color var(--transition-speed-medium));
+            }
+        }
+        &__footer {}
+        &__footer-action-container {}
+        &__footer-action {}        
+    }
+    &:hover {
+        p {
+            color: black;
+        }
+        .content-block__body-title {
+            span {
+                color: black;
+            }
+            h2,h3,h4,h5,h6 {
+                color: var(--color-accent);
+            }
+        }    
+    }
+}

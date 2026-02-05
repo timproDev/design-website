@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import DesignBlock from "../components/DesignBlock.astro";
+import designData from "../data/designData";
+---
+
+<Layout title="Design">
+  <Nav />
+  <main class="l-padding--bottom-xxl">
+    <div class="staff-row staff-full-content-width l-padding--top-xl">
+      <h1><span class="color--accent">.</span>design</h1>
+    </div>
+    <div
+      class="staff-row staff-full-content-width l-padding--top-xl l-padding--bottom-m"
+    >
+      <div class="staff-row staff-2-col-wide-left">
+        <div>
+          <div class="content-block">
+            <h2>Designing for code, coding for design</h2>
+            <p>
+              As a digital designer, I enjoy bouncing back-and-forth from <b
+                >VSC</b
+              > to <b>Figma</b>, building flexible, accessible styles in CSS
+              that support dark mode, reduced motion, and responsive layouts.
+            </p>
+            <p>
+              I tend to do my most effective designing <i>in-browser</i>. I hold
+              a strong understanding of how a brand’s visual styles can be
+              translated into a scalable and adaptive presentation framework
+              (SCSS/CSS). For 10<span
+                class="color--accent"
+                style="font-weight: 800">+</span
+              > years I have collaborated with and advised global teams on the design
+              and build of web applications and digital content for B2B, B2C, data
+              & analytics, and digital marketing. I worked as part of a team that
+              designed and developed the authoring environment using <a
+                href="//experienceleague.adobe.com/docs/experience-manager.html?lang=en"
+                target="_blank">Adobe Experience Manage</a
+              >. In AEM <a
+                href="//experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en"
+                target="_blank">style system</a
+              >, I've mapped out and built a scalable style framework to support
+              multiple brands and themes.
+            </p>
+            <p>
+              Finally, I'm happy to say that I built this site using <a
+                href="https://astro.build/"
+                target="_blank">Astro.</a
+              > Enjoy some of my work below.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="global-img-container icon-grid">
+            <figure>
+              <img
+                src="/assets/img/design/logos/fig-icon.png"
+                alt="Figma"
+                class=""
+              />
+              <figcaption>Figma</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/assets/img/design/logos/vsc-icon.png"
+                alt="Visual Studio Code"
+                class=""
+              />
+              <figcaption>Visual Studio Code</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/assets/img/design/logos/aem-icon.png"
+                alt="Adobe Experience Manager"
+                class=""
+              />
+              <figcaption>Adobe Experience Manager</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/assets/img/design/logos/wordpress.png"
+                alt="WordPress Icon"
+                class=""
+              />
+              <figcaption>WordPress</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/assets/img/design/logos/sketch-icon.png"
+                alt="Sketch"
+                class=""
+              />
+              <figcaption>Sketch</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="/assets/img/design/logos/adobe-icon.png"
+                alt="Adobe Creative Cloud"
+                class=""
+              />
+              <figcaption>Adobe Creative Cloud</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--top-xl">
+      <h4>UX and Visual Design</h4>
+    </div>
+    {designData.map((block) => <DesignBlock {...block} />)}
+    <div class="staff-row staff-is-full">
+      <div class="design-block" data-expand="">
+        <div class="staff-row staff-2-col-wide-right" data-expand-content="">
+          <div class="content-block">
+            <h3>Interactive Data Visualization</h3>
+            <ul>
+              <li><span>Team(s)</span><p>Corporate Marketing, Editorial</p></li>
+              <li><span>Company</span><p>Marsh</p></li>
+              <li class="li-visible-expand"><span>Role</span><p>Visual/Information Design, Developer</p></li>
+              <li class="li-visible-expand">
+                <span>Focus</span><p>
+                  During my time at Marsh, I worked closely with Editorial teams to elevate the site’s content experience through data visualization. I collaborated with cross-functional teams to clarify messaging, collect and organize data and spreadsheets, translate insights into visual concepts, and ultimately build interactive data visualizations using D3.js.
+                </p>
+              </li>
+              <li class="li-visible-expand">
+                <span>More about the project</span><p>
+                  The work was highly collaborative and creative, with many concepts emerging through shared discussion and hand-drawn sketches.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="content-block">
+            <div class="global-img-container">
+              <div class="video-block">
+              <div class="video-block__embed-container">
+                <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1161955764"
+                frameborder="0"
+                allowfullscreen></iframe>
+            </div>
+            </div>
+            <div class="video-block">
+              <div class="video-block__embed-container">
+                <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1161955772"
+                frameborder="0"
+                allowfullscreen></iframe>
+            </div>
+            </div>
+            <div class="video-block">
+              <div class="video-block__embed-container">
+                <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1161955731"
+                frameborder="0"
+                allowfullscreen></iframe>
+            </div>
+            </div>
+            <div class="video-block">
+              <div class="video-block__embed-container">
+                <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1161955749"
+                frameborder="0"
+                allowfullscreen></iframe>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="design-block__expand"
+          data-expand-toggle=""
+          aria-expanded="false">See more</button
+        >
+        <button
+          class="design-block__close"
+          data-expand-close=""
+          aria-label="Close">✕</button
+        >
+      </div>
+    </div>
+  </main>
+  <script src="/src/js/expand-toggle.js"></script>
+</Layout>

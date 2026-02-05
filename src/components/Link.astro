@@ -1,0 +1,11 @@
+---
+// Link.astro
+
+const { href, label, target, rel, class: className, isActive } = Astro.props;
+const classes = [className, isActive ? 'active' : null].filter(Boolean).join(' ');
+
+---
+
+<a href={href} target={target} rel={rel} class={classes}><span class="tds-color--accent">.</span>
+  {label}
+</a>

@@ -1,0 +1,59 @@
+.batman {
+    position: relative;
+    text-align: center;
+    padding: var(--space-m);
+    margin: var(--space-s) var(--space-m) 0 var(--space-m);
+    @include transition(background-color var(--transition-speed-medium), border var(--transition-speed-medium));
+    @include mq('tablet') {
+        padding: var(--space-l);
+        margin: 0 var(--space-l);
+    }
+    border-radius: 16px;
+    border: 8px solid var(--color-background-light);
+    .content-block {        
+        &__img-container {}
+        &__header-img {}
+        &__eyebrow {}
+        &__eyebrow-text {}
+        &__body {}
+        &__body-title {
+            span, h2,h3,h4,h5,h6 {
+                font-family: var(--font-family-primary);
+                font-weight: 700;
+                font-size: var(--typ-p-size-ml);
+                @include transition(color var(--transition-speed-medium));
+            }
+        }
+        &__body-text {
+            p {}
+        }
+        &__footer {}
+        &__footer-action-container {}        
+        &__footer-action {            
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-indent: -9999px;
+        }
+    }
+    &:hover {
+        .content-block__body-title {
+            * {
+                color: white;
+            }            
+        }
+        background-color: var(--color-accent);
+        border: 8px solid white;
+    }
+    &:nth-of-type(3) {
+        display: block;
+        @include mq('tablet') {            
+            display: none;
+        }        
+    }
+}

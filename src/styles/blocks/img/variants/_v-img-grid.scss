@@ -1,0 +1,82 @@
+.icon-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    column-gap: var(--space-m);
+    row-gap: var(--space-m);
+    flex-wrap: wrap;
+    @include mq('tablet') {
+        justify-content:flex-end;
+        column-gap: var(--space-ml);
+    }
+    &.global-img-container {
+        figure {
+            max-width: 90px;
+            position: relative;
+            margin: 0;
+            img {
+                width: 100%;
+                box-shadow: var(--box-shadow-straight);
+                border-radius: 24px;
+                    @include mq('tablet') {
+                        border-radius: 24px;
+                    }
+            }
+            &:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(5) { 
+                &:hover {
+                    figcaption {
+                        @media screen and (prefers-reduced-motion: no-preference) {                    
+                            animation: figcaptionBounce;
+                            animation-timing-function:cubic-bezier(0.175, 1, 0.32, 1.75);
+                            animation-fill-mode: forwards;
+                            animation-direction: normal;
+                            animation-iteration-count: 1;
+                            animation-duration: 300ms;
+                            animation-delay: 0;
+                        }
+                    }                    
+                }
+            }
+            &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6) { 
+                &:hover {
+                    figcaption {
+                        @media screen and (prefers-reduced-motion: no-preference) {                    
+                            animation: figcaptionBounce2;
+                            animation-timing-function:cubic-bezier(0.175, 1, 0.32, 1.75);
+                            animation-fill-mode: forwards;
+                            animation-direction: normal;
+                            animation-iteration-count: 1;
+                            animation-duration: 250ms;
+                            animation-delay: 0;
+                        }
+                    }                    
+                }
+            }
+        }        
+        figcaption {
+            position: absolute;
+            color: var(--color-accent);
+            font-family: var(--font-family-primary);
+            font-style: normal;
+            font-weight: 700;
+            // font-size: var(--typ-p-size-m);
+            padding: 4px 8px;
+            border-radius: 16px;
+            background-color: white;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            line-height: 16px;
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            display: none;
+            @include mq('tablet') {
+                display: block;
+                opacity: 0;
+            }
+        }
+        &:first-of-type {}
+        @include mq('tablet') {}        
+    }
+}
+

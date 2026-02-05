@@ -1,0 +1,31 @@
+.content-block {
+    &__img-container {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    &__header-img {
+        width: 100%;        
+    }
+    &__eyebrow {}
+    &__eyebrow-text {}
+    &__body {}
+    &__body-title {}
+    &__body-text {}
+    &__footer {}
+    &__footer-action-container {}
+    &__footer-action {}
+    h2 {
+        font-size: var(--typ-h2-size);
+        line-height: 1.15;
+        color: var(--color-accent);
+        font-weight: 200;
+    }
+}
+
+@import "variant/v-content-block--homepage";
+@import "variant/v-content-block--lvl-2";
+@import "variant/v-content-block--text";
+@import "variant/v-content-block--intro";
+@import "variant/v-batman";

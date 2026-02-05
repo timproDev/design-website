@@ -1,0 +1,189 @@
+@mixin showStructure($mode: 'on light') {
+    box-shadow: 0 0 1px red !important;
+    overflow: visible !important;
+    * {
+        box-shadow: 0 0 1px red !important;
+        overflow: visible !important;
+    }
+    @if $mode == 'on dark' {
+        * {
+            box-shadow: 0 0 1px rgb(255, 193, 193) !important;
+            overflow: visible !important;
+        }        
+    }
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin boxIt {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 1px #edabff;
+  * {
+      box-sizing: border-box;
+      box-shadow: 0 0 0 1px #edabff;
+  }
+}
+
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin selection {
+    ::selection { @content; }
+    ::-moz-selection { @content; }
+}
+
+@mixin -typo($type) {
+    @if $type == 'display' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        font-size: 8vw;
+        line-height: 8vw;
+        @include mq('tablet') {
+            font-size: var(--typ-p-size-s);
+            line-height: var(--typ-p-size-s);
+            font-size: 6vw;
+            line-height: 5.5vw
+        }
+        @include mq('large') {
+            font-size: var(--typ-p-size-s);
+            line-height: var(--typ-p-size-s);
+        }
+    } @else if $type == 'h1' {
+            font-family: var(--font-family-primary);
+            font-weight: 700;
+            font-size: 60px;
+            line-height: var(--typ-h-line-height);
+            font-size: 12vw;
+            line-height: var(--typ-h-line-height);
+            @include mq('tablet') {
+                font-size: 52px;
+                line-height: var(--typ-h-line-height);               
+            }
+    } @else if $type == 'h2' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        // font-size: $heading-h2-size-mobile;
+        // line-height: $heading-h2-lineheight-mobile;
+        @include mq('tablet') {
+            font-size: 42px;
+            line-height: var(--typ-h-line-height);
+        }        
+    } @else if $type == 'h3' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        font-size: 32px;
+        line-height: var(--typ-h-line-height);
+        @include mq('tablet') {
+            font-size: 32px;
+            line-height: var(--typ-h-line-height);
+        }        
+    } @else if $type == 'h4' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        // font-size: $heading-h4-size-mobile;
+        // line-height: $heading-h4-lineheight-mobile;
+        @include mq('tablet') {
+            font-size: 24px;
+            line-height: var(--typ-h-line-height);
+        }        
+    } @else if $type == 'h5' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        // font-size: $heading-h5-size-mobile;
+        // line-height: $heading-h5-lineheight-mobile;
+        @include mq('tablet') {
+            font-size: 18px;
+            line-height: var(--typ-h-line-height);
+        }        
+    } @else if $type == 'h6' {
+        font-family: var(--font-family-primary);
+        font-weight: 700;
+        // font-size: $heading-h6-size-mobile;
+        // line-height: $heading-h6-lineheight-mobile;
+        @include mq('tablet') {
+            font-size: 16px;
+            line-height: var(--typ-h-line-height);
+        }        
+    } @else if $type == 'para s' {
+        // font-size: $para-size-s-mobile;
+        // line-height: $para-lineheight-s-mobile;
+        @include mq('tablet') {
+            font-size: 12px;
+            line-height: var(--typ-p-line-height);
+        }
+    } @else if $type == 'para ms' {
+        // font-size: $para-size-ms-mobile;
+        // line-height: $para-lineheight-ms-mobile;
+        @include mq('tablet') {
+            font-size: 14px;
+            line-height: var(--typ-p-line-height);
+        }
+    } @else if $type == 'para m' {
+        font-size: var(--typ-p-size-m);
+        line-height: var(--typ-p-line-height);
+        @include mq('tablet') {
+            font-size: var(--typ-p-size-m);
+            line-height: var(--typ-p-line-height);
+        }        
+    } @else if $type == 'para ml' {
+        font-size: var(--typ-p-size-ml);
+        line-height: var(--typ-p-line-height);
+        @include mq('tablet') {
+            font-size: var(--typ-p-size-ml);
+            line-height: var(--typ-p-line-height);
+        }        
+    } @else if $type == 'para l' {
+            // font-size: 22px;
+            // line-height: 30px;
+        @include mq('tablet') {
+            font-size: var(--typ-p-size-l);
+            line-height: var(--typ-p-line-height);
+        }        
+    } @else if $type == 'para xl' {
+        // font-size: $para-size-l-mobile;
+        // line-height: $para-lineheight-l-mobile;
+        @include mq('tablet') {
+            font-size: var(--typ-p-size-xl);
+            line-height: var(--typ-p-line-height);
+        }        
+    }
+}

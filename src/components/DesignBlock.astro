@@ -1,0 +1,44 @@
+---
+const { title, src, alt, caption, company, team, role, focus, more } = Astro.props;
+const images = Array.isArray(src) ? src : [src];
+const alts = Array.isArray(alt) ? alt : [alt];
+const captions = Array.isArray(caption) ? caption : [caption];
+---
+
+<div class="staff-row staff-is-full">
+  <div class="design-block" data-expand>
+  <div class="staff-row staff-2-col-wide-right" data-expand-content>    
+    <div class="content-block">
+      <h3>{title}</h3>
+      <ul>
+        <li><span>Role</span><p>{role}</p></li>
+        <li><span>Company</span><p>{company}</p></li>
+        <li class="li-visible-expand"><span>Team(s)</span><p>{team}</p></li>
+        <li class="li-visible-expand"><span>Focus</span><p>{focus}</p></li>
+        <li class="li-visible-expand"><span>More about the project</span><p>{more}</p></li>
+      </ul>
+    </div>
+    <div class="content-block">
+      <div class="global-img-container">
+         {images.map((imageSrc, index) => (
+            <figure>
+              <img
+                class="hero__image"
+                src={imageSrc}
+                alt={alts[index] || ''}
+                loading="lazy"
+              />
+              {captions[index] && <figcaption>{captions[index]}</figcaption>}
+            </figure>
+          ))}
+        <!-- <figure>
+          <img src={src} alt={alt} class="" />
+          <figcaption>{caption}</figcaption>
+        </figure> -->
+      </div>
+    </div>
+  </div>
+  <button class="design-block__expand" data-expand-toggle aria-expanded="false">See more</button>
+  <button class="design-block__close" data-expand-close aria-label="Close">✕</button>
+  </div>
+</div>

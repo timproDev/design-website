@@ -1,0 +1,43 @@
+@mixin mq($arg) {
+    @if $arg == 'mobile' {
+        @media (min-width: 320px) {
+            @content;
+        }
+    }
+    @else if $arg == 'tablet' {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $arg == 'desktop' {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $arg == 'x-large' {
+        @media (min-width: 1600px) {
+            @content;
+        }
+    }
+    @else if $arg == 'content width' {
+        @media (min-width: 1432px) {
+            @content;
+        }
+    }
+    @else if $arg == 'dark mode' {
+        @media (prefers-color-scheme: dark) {
+            @content;
+        }
+        .wdb-mode--dark &,
+        .wdc-mode--dark &,
+        .wdb-mode--dark,
+        .wdc-mode--dark {
+            @content;
+        }
+    }
+    @else if $arg == 'reduce motion' {
+        @media screen and (prefers-reduced-motion: no-preference) {
+            @content;
+        }
+    }
+}

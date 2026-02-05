@@ -1,0 +1,95 @@
+.video-block {
+    margin-bottom: 8vh;
+    &__container {
+        background: #291e29;
+        border-radius: 24px;
+        color: #fff;
+        padding: 2rem;
+        @include mq('tablet') {
+padding: 4.5rem;
+        }
+        box-shadow: inset 0 -30px 90px #000;
+    }
+    &__embed-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        box-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+            @include mq('tablet') {
+                border-radius: 6px;
+                width: 100%;
+            }        
+        // @media screen and (prefers-reduced-motion: no-preference) {
+        //     animation: fadeIn; 
+        //     animation-timing-function: linear;
+        //     animation-fill-mode: forwards;
+        //     animation-direction: normal;
+        //     animation-iteration-count: 1;
+        //     animation-duration: .5s;
+        //     animation-delay: .5s;
+        // }
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius:16px;        
+    }
+    &__body-container {
+        margin: var(--space-ml) 0 0 0;
+        background: #000;
+        padding: 2rem;
+        @include mq('tablet') {
+padding: 3rem;
+        }
+        
+        border-radius: 16px;
+        // max-width: var(--narrow-content-width);
+        // margin: 0 auto;
+        // position: relative;
+        // &:after {
+        //     content: '';
+        //     width: 100%;
+        //     height: 1.5px;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     background: var(--color-accent);
+        //     background: linear-gradient(90deg, rgba(250,128,114,0) 0%, var(--color-accent) 50%, var(--color-accent) 50%, rgba(250,128,114,0) 100%);
+        // }
+    }
+    &__label {
+    }
+    &__title {
+        @include -typo('h3');
+        color: #fff;
+        margin-block-start: var(--space-xxs);
+        @include mq('tablet') {
+            margin-block-start: var(--space-xxxs);
+        }
+    }
+    &__description {
+
+        p {
+            font-size: 20px;
+            line-height: 1.4;
+            font-family: var(--font-family-secondary);
+            margin-block-end: 0;
+            margin-block-start: var(--space-s);
+            @include mq('tablet') {
+                margin-block-start: var(--space-s);
+            }
+        }
+    }
+}
+
+

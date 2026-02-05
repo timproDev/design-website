@@ -1,0 +1,20 @@
+---
+
+import navData from "../data/navData";
+import Link from '../components/Link.astro';
+
+const currentPath = Astro.url.pathname;
+
+---
+
+<nav>
+    <ul class="">
+        {
+            navData.map((link) => (
+                <li><Link {...link}
+                isActive={link.href === '/' ? currentPath === '/' : currentPath.startsWith(link.href)} 
+        /></li>
+            ))
+        }
+    </ul>
+</nav>

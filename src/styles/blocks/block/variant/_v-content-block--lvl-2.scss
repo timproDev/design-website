@@ -1,0 +1,76 @@
+.v-content-block--lvl-2 {
+    // @include boxIt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    // padding-bottom: var(--space-xl);
+    @include mq('tablet') {
+        // padding-bottom: var(--space-xxl);
+    }
+    margin-block-end: 0;
+    .content-block {
+        &__img-container {
+            text-align: center;
+            width: 35%;
+            order: 2;
+        }
+        &__header-img {  
+            display: none;          
+            border-radius: 3px;
+            box-shadow:
+                2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+                22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                100px 100px 80px rgba(0, 0, 0, 0.07);
+                @include mq('tablet') {
+                    border-radius: 6px;
+                    width: 100%;
+                }
+        }
+        &__eyebrow {}
+        &__eyebrow-text {}
+        &__body {
+            order: 1;
+            width: 100%;
+            @media screen and (prefers-reduced-motion: no-preference) {
+                animation: fadeIn;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+                animation-direction: normal;
+                animation-iteration-count: 1;
+                animation-duration: .5s;
+                animation-delay: 0;
+            }
+        }
+        &__body-title {
+            width: 100%;
+            text-align: center;
+            span {
+                color: var(--color-accent);
+            }
+            h1 {
+                @include -typo('h1');
+                // text-shadow: 1px 1px 0 salmon;
+                @include mq('tablet') {
+                    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+                    background-color: transparent;
+                    padding: 0;
+                    display: initial;
+                }
+            }            
+        }
+        &__body-text {
+            p {
+                @include -typo('para m');
+                font-style: italic;
+            }
+        }
+        &__footer {}
+        &__footer-action-container {}
+        &__footer-action {}
+    }
+}
