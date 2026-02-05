@@ -7,6 +7,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  site: 'https://timprodev.github.io/design-website/',
-  base: '/design-website/',
+  site: 'https://timprodev.github.io',
+  base: '/design-website',
 });
