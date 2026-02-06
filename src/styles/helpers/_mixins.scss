@@ -90,13 +90,11 @@
     } @else if $type == 'h1' {
             font-family: var(--font-family-primary);
             font-weight: 700;
-            font-size: 60px;
-            line-height: var(--typ-h-line-height);
             font-size: 12vw;
-            line-height: var(--typ-h-line-height);
+            line-height: var(--typ-h-line-height-tight);
             @include mq('tablet') {
                 font-size: 52px;
-                line-height: var(--typ-h-line-height);               
+                line-height: var(--typ-h-line-height-tight);               
             }
     } @else if $type == 'h2' {
         font-family: var(--font-family-primary);

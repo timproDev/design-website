@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
 import CopyButton from "../components/CopyButton.astro";
 ---
 
 <Layout title="Home">
-  <Nav />
   <main>
     <div class="staff-row staff-full-content-width l-padding--top-xl l-padding--bottom-xl">
       <div class="content-block v-content-block--homepage">
@@ -26,9 +24,6 @@ import CopyButton from "../components/CopyButton.astro";
               >schletter
             </h1>
           </div>
-          <div class="show-mobile l-padding--bottom-l">
-            <CopyButton />
-          </div>
           <div class="content-block__body-text">
             <h2>
               I'm a designer, artist, musician and a student of the creative
@@ -38,7 +33,13 @@ import CopyButton from "../components/CopyButton.astro";
               at the crossroads of design and front end development, I find
               myself rich with opportunities to explore, understand and improve
               the visual implementation that supports a digital experience.
-            </p><p>
+            </p>
+            <div class="show-mobile l-padding--bottom-l contact-cta">
+            <h3>Contact</h3>
+            <p>If you'd like to reach out to me, send me an email by copying and pasting the email below.</p>
+            <CopyButton />
+          </div>
+          <p>
               Check out <a
                 href="//www.linkedin.com/in/schletter/"
                 target="_blank">my LinkedIn</a
@@ -60,3 +61,4 @@ import CopyButton from "../components/CopyButton.astro";
     </div> -->
   </main>
   </Layout>
+  

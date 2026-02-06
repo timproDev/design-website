@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+import CopyButton from "../components/CopyButton.astro";
 import DesignBlock from "../components/DesignBlock.astro";
 import designData from "../data/designData";
 ---
 
 <Layout title="Design">
-  <Nav />
+  
   <main class="l-padding--bottom-xxl">
     <div class="staff-row staff-full-content-width l-padding--top-xl">
       <h1><span class="color--accent">.</span>design</h1>
@@ -19,28 +19,21 @@ import designData from "../data/designData";
           <div class="content-block">
             <h2>Designing for code, coding for design</h2>
             <p>
-              As a digital designer, I enjoy bouncing back-and-forth from <b
-                >VSC</b
-              > to <b>Figma</b>, building flexible, accessible styles in CSS
+              As a digital designer, I enjoy bouncing back-and-forth from <span class="color--accent">VSC</span> to <span class="color--accent">Figma</span>, building flexible, accessible styles in CSS
               that support dark mode, reduced motion, and responsive layouts.
             </p>
             <p>
               I tend to do my most effective designing <i>in-browser</i>. I hold
               a strong understanding of how a brand’s visual styles can be
-              translated into a scalable and adaptive presentation framework
-              (SCSS/CSS). For 10<span
-                class="color--accent"
-                style="font-weight: 800">+</span
+              translated into a scalable and adaptive presentation framework. Like many designers and developers, I found that <span class="color--accent">AI</span> has been an integral tool for solution development and troubleshooting. For 10<span
+                class="color--accent">+</span
               > years I have collaborated with and advised global teams on the design
               and build of web applications and digital content for B2B, B2C, data
               & analytics, and digital marketing. I worked as part of a team that
               designed and developed the authoring environment using <a
                 href="//experienceleague.adobe.com/docs/experience-manager.html?lang=en"
-                target="_blank">Adobe Experience Manage</a
-              >. In AEM <a
-                href="//experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en"
-                target="_blank">style system</a
-              >, I've mapped out and built a scalable style framework to support
+                target="_blank">Adobe Experience Manager</a
+              >. With AEM's style system, I've mapped out and built a scalable style framework to support
               multiple brands and themes.
             </p>
             <p>
@@ -182,6 +175,11 @@ import designData from "../data/designData";
           aria-label="Close">✕</button
         >
       </div>
+      <div class="show-mobile l-padding--bottom-l contact-cta">
+            <h3>Contact</h3>
+            <p>If you'd like to reach out to me, send me an email by copying and pasting the email below.</p>
+            <CopyButton />
+          </div>
     </div>
   </main>
   <script src="/src/js/expand-toggle.js"></script>

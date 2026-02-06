@@ -3,6 +3,8 @@
 import "../styles/style.scss";
 import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
+import SiteHeader from "../components/SiteHeader.astro";
+
 
 ---
 <!doctype html>
@@ -20,7 +22,9 @@ const { title } = Astro.props;
 
 	</head>
 	<body>
+		<SiteHeader />
 		<slot />
 		<Footer />
+		<script src="/src/js/mobile-menu.js"></script>
 	</body>
 </html>

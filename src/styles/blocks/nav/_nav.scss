@@ -1,60 +1,59 @@
-nav {
-    background-color: var(--color-background-light);
-    display: flex;
+// nav {
+//     background-color: var(--color-background-light);
+//     display: flex;
     
-    padding: var(--space-ms) var(--space-m);
-    flex-direction: column;
-    align-items: center;
+//     padding: var(--space-ms) var(--space-m);
+//     flex-direction: column;
+//     align-items: center;
     
-    width: 100%;
+//     width: 100%;
 
-    @include mq('tablet') {
+//     @include mq('tablet') {
 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: var(--space-ms) var(--space-m);
-    }
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: space-between;
+//         padding: var(--space-ms) var(--space-m);
+//     }
 
-    .home {
-        flex: 0 0 auto;
-        text-decoration: none;
-        font-weight: bold;
-        padding-bottom: 12px;
-        @include mq('tablet') {
-            padding-bottom: 0;
-            align-items: center;
-        }
-    }
+//     .home {
+//         flex: 0 0 auto;
+//         text-decoration: none;
+//         font-weight: bold;
+//         padding-bottom: 12px;
+//         @include mq('tablet') {
+//             padding-bottom: 0;
+//             align-items: center;
+//         }
+//     }
 
 
 
-    ul {
-        display: flex;
+//     ul {
+//         display: flex;
         
-        list-style: none;
-        margin: 0;
-        padding: 0 0 0 0;
-        flex-direction: column;
-    align-items: center;
-    width: 100%;
-        @include mq('tablet') {
-            align-items: stretch;
-            flex-direction: row;
-            padding: 0 24px 0 24px;
-            // justify-content: center;
-            gap: 3rem;
-        flex: 1;
-        justify-content: end;
-        }
-        li {}
-    }
+//         list-style: none;
+//         margin: 0;
+//         padding: 0 0 0 0;
+//         flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//         @include mq('tablet') {
+//             align-items: stretch;
+//             flex-direction: row;
+//             padding: 0 24px 0 24px;
+//             gap: 3rem;
+//         flex: 1;
+//         justify-content: end;
+//         }
+//         li {}
+//     }
 
-    .ui-copy-email {
-        flex: 0 0 auto;
-        text-decoration: none;
-    }
-}
+//     .ui-copy-email {
+//         flex: 0 0 auto;
+//         text-decoration: none;
+//     }
+// }
 
 a.menu-item {
     font-family: var(--font-family-primary);
@@ -68,7 +67,7 @@ a.menu-item {
     font-size: 22px;
     @include mq('tablet') {
         font-weight: 300;
-        font-size: 24px;
+        font-size: 22px;
     }
     &.home {
         padding-bottom: 8px;
@@ -116,4 +115,90 @@ a.menu-item {
             color: black;
         }
     }
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.site-logo,
+.site-contact,
+.ui-copy-email {
+  flex: 0 0 auto;
+}
+
+.site-nav {
+  flex: 1;
+  box-shadow: 0 14px 20px -22px #000, 0 34px 40px -30px #000;  
+}
+
+.site-nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-wrap: wrap;
+  
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    &[aria-expanded="true"] {
+      color: var(--color-accent);
+    }
+  }
+
+  
+  .site-contact, .ui-copy-email {
+    display: none;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-background-light);
+    display: none;
+    z-index: 1000;
+  }
+
+
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0;
+  }
+
+  .site-nav__list a {
+    padding: 0.75rem;
+    display: block;
+  }
+}
+  
+
+  .site-header.is-open .site-nav {
+    display: block;
+    padding: 2rem 0;
+  }
+
 }

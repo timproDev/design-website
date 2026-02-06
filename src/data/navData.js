@@ -7,8 +7,8 @@ const navData = [
         class:"menu-item"
     },
     {
-        label:"video & animation",
-        href:"/video-and-animation/",
+        label:"art & animation",
+        href:"/art-and-animation/",
         target:"",
         rel:"",
         class:"menu-item"

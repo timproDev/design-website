@@ -1,0 +1,36 @@
+---
+import navData from "../data/navData";
+import Link from './Link.astro';
+import CopyButton from "../components/CopyButton.astro";
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <!-- <a class={`menu-item home ${Astro.url.pathname === '/' ? 'active' : ''}`} href="/"><span class="tds-color--accent">.</span>home</a> -->
+   <a href="/"><img src="/assets/img/icons/logo.svg" alt="Tim's Website" /></a>
+
+  <button
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    ☰
+  </button>
+
+  <nav class="site-nav">
+    <ul class="site-nav__list">
+      <!-- <li><a href="/work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li> -->
+      {
+            navData.map((link) => (
+                <li><Link {...link}
+                isActive={link.href === '/' ? currentPath === '/' : currentPath.startsWith(link.href)} 
+        /></li>
+            ))
+        }
+    </ul>
+  </nav>
+
+  <CopyButton />
+</header>

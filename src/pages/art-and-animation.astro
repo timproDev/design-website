@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CopyButton from "../components/CopyButton.astro";
+import VideoBlock from "../components/VideoBlock.astro";
+import videoData from "../data/videoData";
+---
+
+<Layout title="Art & Animation">
+  <main class="l-padding--bottom-xxl">
+    <div class="staff-row staff-full-content-width l-padding--top-xl">
+      <h1><span class="color--accent">.</span>art & animation</h1>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--y-xl">
+      <div class="staff-row staff-2-col-wide-left">
+        <div>
+          <div class="content-block">
+            <h2>Ride the artmaking cycle</h2>
+
+            <p>
+              I used to want to work for Disney. Then I moved to NYC and found
+              myself working as an animator and storyboard artist on PBS’s <i
+                >WordWorld</i
+              >. Somewhere along the way, I became frustrated with what I
+              thought was the monotony of the work—only to realize, years later,
+              that it wasn’t monotony at all. It was me bumping up against the
+              limitations of my own craft. All of this is to say: <span
+                class="color--accent"
+                >uncovering your personal approach to the creative process is a
+                lifelong journey.</span
+              > I’m deeply grateful to still be on it.
+            </p>
+            <p>
+              <i
+                >Those who continue to make art are those who...have learned not
+                to quit.</i
+              ><span class="color--accent"><br /><i>Art & Fear</i></span>
+            </p>
+            <div class="show-mobile l-padding--bottom-l contact-cta">
+              <h3>Contact</h3>
+              <p>
+                If you'd like to reach out to me, send me an email by copying
+                and pasting the email below.
+              </p>
+              <CopyButton />
+            </div>
+            <p>
+              Below you'll find various output of my artistic endeavors—enjoy!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="global-img-container icon-grid">
+              <figure>
+                <img
+                  src="/assets/img/design/logos/proc.png"
+                  alt="ProCreate"
+                  class=""
+                />
+                <figcaption>Pro Create</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/assets/img/design/logos/ae.png"
+                  alt="Adobe After Effects"
+                  class=""
+                />
+                <figcaption>Adobe After Effects</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/assets/img/design/logos/pr.png"
+                  alt="Adobe Premier"
+                  class=""
+                />
+                <figcaption>Adobe Premier</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="staff-row staff-full-content-width">
+      <div>
+        <!--  -->
+        {videoData.map((block) => <VideoBlock {...block} />)}
+        <!--  -->
+      </div>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--top-m">
+      <div class="staff-row staff-half-and-half">
+        <figure><img src="/assets/img/art/fish-2.jpg" alt="" /></figure>
+        <figure><img src="/assets/img/art/fish.jpg" alt="" /></figure>
+      </div>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--top-m">
+    <div class="staff-row staff-half-and-half">
+        <figure><img src="/assets/img/art/cluster-1.jpg" alt="" /></figure>
+        <figure><img src="/assets/img/art/cluster-2.jpg" alt="" /></figure>
+    </div>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--top-m">
+    <div class="staff-row staff-half-and-half">
+        <figure><img src="/assets/img/art/cluster-3.jpg" alt="" /></figure>
+        <figure><img src="/assets/img/art/cluster-4.jpg" alt="" /></figure>
+    </div>
+    </div>
+    <div class="staff-row staff-full-content-width l-padding--top-m">
+        <figure><img src="/assets/img/art/sky-island.jpg" alt="" /></figure>
+    </div>
+  </main>
+</Layout>

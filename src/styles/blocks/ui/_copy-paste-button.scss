@@ -1,16 +1,11 @@
-
 .ui-copy-email {
-  display: inline-block;
+  // display: inline-block;
   position: relative;
   transform: translateY(1px);
   z-index: 1000;
-  label {
-    padding-inline-end: .75rem;
-  }
+
   button.copy-email-btn {
-    background-color: var(--color-accent);
-    color: #fff;
-    padding: 12px 20px 12px 36px;
+
     border-radius: 40px;
     font-family: var(--font-family-primary);
     font-weight: 600;
@@ -20,6 +15,16 @@
     border: none;
     position: relative;
     box-shadow: var(--box-shadow-straight);
+    display: block;
+    width: 100%;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 12px 20px 12px 20px;
+
+    @include mq('tablet') {
+      padding: 12px 20px 12px 36px;
+    }
+
     &:before {
       font-family: "Material Icons";
       content: "content_copy";
@@ -28,36 +33,48 @@
       display: inline-block;
       line-height: 1;
       color: #fff;
+
       //
-      display: block;
-      position: absolute;
-      left: 14px;
-      top: 30%;
-      bottom: 0;
-    }
-      //
-    
-    &:hover {      
-      background-color: var(--color-accent-light);
-      color: #000;
-      &:before {
-        color: var(--color-black);
+      @include mq('tablet') {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: 30%;
+        bottom: 0;
       }
     }
+
+    @include mq("reduce motion") {
+      @include transition(background-color var(--transition-speed-medium) ease-in-out)
+    }
+
+    //
+
+    &:hover {
+      background-color: var(--color-black);
+
+      // &:before {
+      //   color: var(--color-black);
+      // }
+    }
+
     &:active {
       background-color: var(--color-accent);
     }
+
     &.copied {
-      background-color: #000; /* light green background */
+      background-color: #000;
+      /* light green background */
       color: #fff;
     }
   }
 
   .feedback {
     position: absolute;
-    left: 50%;
+    left: 0;
+    right: 0;
     bottom: 0;
-    transform: translateX(0) translateY(80px);
+    transform: translateX(0) translateY(100px);
     background: #000;
     color: #fff;
     padding: 12px;
@@ -67,20 +84,17 @@
     opacity: 0;
     // white-space: nowrap;
     white-space: pre-line;
-    width: 80px;
+    width: 100%;
     text-align: center;
-    
+    box-shadow: var(--box-shadow-straight);
     @include mq("reduce motion") {
-      @include transition(
-        opacity var(--transition-speed-medium) ease-in-out,
-        transform var(--transition-speed-medium) ease-in-out
-      );
+      @include transition(opacity var(--transition-speed-medium) ease-in-out,
+        transform var(--transition-speed-medium) ease-in-out);
     }
   }
 
   .feedback.show {
-    
     opacity: 1;
-    transform: translateX(0px) translateY(100px);
+    transform: translateX(0px) translateY(110px);
   }
 }

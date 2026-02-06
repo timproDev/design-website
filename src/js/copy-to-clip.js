@@ -9,7 +9,7 @@ function initCopyEmail() {
       try {
         await navigator.clipboard.writeText(email);
 
-        feedback.textContent = 'My email is copied to your clipboard!';
+        feedback.textContent = 'My email has been successfully copied to your clipboard!';
         feedback.classList.add('show');
         button.classList.add('copied');
 
