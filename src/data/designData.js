@@ -24,13 +24,24 @@ const designData = [
     {
         title:"Studio makeover",
         src:["/assets/img/design/portfolio/dam-home.png","/assets/img/design/portfolio/dam-filter.png"],
-        alt:["Western Digital Blog Rebrand Concept","Western Digital Blog Post Rebrand"],
-        caption:["Western Digital Blog Rebrand Concept", "Western Digital Blog Post Rebrand"],
+        alt:["Western Digital Marketing Asset Manager UI Wireframes","Western Digital Marketing Asset Manager UI Wireframes"],
+        caption:["Western Digital Marketing Asset Manager UI Wireframes", "Western Digital Marketing Asset Manager UI Wireframes"],
         company:"Western Digital",
         team:"Product Teams, IT",
         role:"Lead UX designer",
         focus:"This cross-functional project united Creative, Product, and IT teams to improve the usability of an internal marketing asset library. Through eight user interviews conducted over three months, I gathered qualitative feedback using a structured guide while encouraging open discussion to uncover deeper insights and unmet needs.",
         more:"This project was shaped by extensive historical user feedback collected over many years. My involvement continued until I was pulled into another high-priority initiative, and I collaborated with motivated, informed, and genuinely wonderful teams throughout."
+    },
+    {
+        title:"More Studio UI",
+        src:["/assets/img/design/portfolio/dam-multi-select.png","/assets/img/design/portfolio/dam-open-item.png"],
+        alt:["Western Digital Marketing Asset Manager UI Wireframes", "Western Digital Marketing Asset Manager UI Wireframes"],
+        caption:["Western Digital Marketing Asset Manager UI Wireframes", "Western Digital Marketing Asset Manager UI Wireframes"],
+        company:"Western Digital",
+        team:"Product Teams, IT",
+        role:"Lead UX designer",
+        focus:"A deeper dive into the UX of this marketing tool revealed a growing challenge around asset auditing and authoring—areas the UX/UI would need to support. Ultimately, features like information architecture and tagging were deprioritized in favor of focusing on UI and user interactions. Below are explorations of how users might access assets or view their associated metadata. The tool also needed to accommodate a multi-level brand hierarchy while leveraging a consistent, reusable UI framework.",
+        more:"Multi-selecting items emerged as a key interaction from user research with internal marketing and product teams. My goal was also to minimize disruptive changes in state during interactions, ensuring users maintain a sense of control and receive clear feedback."
     },
     {
         title:"Analytics as a Service",
