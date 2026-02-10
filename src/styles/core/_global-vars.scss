@@ -147,9 +147,12 @@
     --color-accent-secondary: #564057;
     --color-accent-2: var(--color-accent-secondary);
     --color-black: #000;
+
     // -primary dark mode
+
+    --color-accent-mode: #CE02D9;
     @include mq('dark mode') {
-        // --color-action-mode: var(--color-light-blue);
+        --color-accent-mode: #fa9eff;
     }
 
 }
