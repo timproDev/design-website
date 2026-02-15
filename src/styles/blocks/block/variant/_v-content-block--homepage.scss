@@ -78,7 +78,7 @@
                 z-index: 5;
                 @include -typo('display');
                 background-color: white;
-                padding: var(--space-m);
+                padding: var(--space-s) var(--space-ms);
                 border-radius: 4px;
                 // word-break: break-all;
                 display: block;

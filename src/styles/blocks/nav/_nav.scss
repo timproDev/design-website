@@ -163,6 +163,9 @@ a.menu-item {
     &[aria-expanded="true"] {
       color: var(--color-accent);
     }
+    &:visited {
+      color: #000;
+    }
   }
 
   

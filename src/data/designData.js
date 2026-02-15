@@ -75,6 +75,17 @@ const designData = [
         role:"Visual Designer, Data Visualization",
         focus:"Our design team developed a foundational style guide for charts and core data-visualization components. Brand expression guided the work, extending the color palette and applying it intentionally to data values and visual hierarchy.",
         more:"The scope of this project focused on creating reusable components with dynamically populated titles and data."
+    },
+    {
+        title:"Style Guide for Email",
+        src:["/assets/img/design/portfolio/mds-email-color.png","/assets/img/design/portfolio/mds-email-typography.png", "/assets/img/design/portfolio/mds-email-spacing.png"],
+        alt:["Email Style Guide for Color", "Email Style Guide for Typography", "Email Style Guide for Spacing"],
+        caption:["Email Style Guide for Color", "Email Style Guide for Typography", "Email Style Guide for Spacing"],
+        company:"Marsh",
+        team:"Corporate Marketing",
+        role:"UX designer",
+        focus:"Although email platforms vary in their support for custom design implementation, the team established a lean foundational style system to guide email creation across environments.",
+        more:"While intentionally minimal in scope, these guidelines enabled consistent visual balance and streamlined execution across campaigns."
     }
 ]
 
